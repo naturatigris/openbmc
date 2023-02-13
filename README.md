@@ -87,9 +87,29 @@ once this bash command is given the open bmc will start building it will take fe
 
 ## QEMU BUILD PROCESS
 
-### 1)build pkg-config package
+### 1)install pkg-config package
 ```sh
 apt-get install -y pkg-config
 ```
 
+### 2)install ninja-build package
+```sh
+apt install ninja-build
+```
 
+### 3)install libglib2.0-dev package
+```sh
+apt installlibglib2.0-dev
+```
+
+### 4)install canvas-npm package
+```sh
+apt install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+
+```
+
+### 5)install canvas-npm package
+```sh
+apt-get install libvirt libvirt-bin bridge-utils uml-utilities qemu-system-common
+
+```
