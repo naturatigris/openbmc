@@ -71,10 +71,10 @@ kudo                    s6q
 lannister               s7106
 ```
 
-Once you know the target (e.g. romulus), source the `setup` script as follows:
+Once you know the target (e.g. evb-ast2600), source the `setup` script as follows:
 
 ```sh
-. setup romulus
+. setup evb-ast2600
 ```
 
 ### 4) Build
@@ -83,105 +83,8 @@ Once you know the target (e.g. romulus), source the `setup` script as follows:
 bitbake obmc-phosphor-image
 ```
 
-Additional details can be found in the [docs](https://github.com/openbmc/docs)
-repository.
+once this bash command is given the open bmc will start building it will take few hours to build,once done we can commence with the building of quemu.
 
-## OpenBMC Development
+## QEMU BUILD PROCESS
 
-The OpenBMC community maintains a set of tutorials new users can go through to
-get up to speed on OpenBMC development out
-[here](https://github.com/openbmc/docs/blob/master/development/README.md)
 
-## Build Validation and Testing
-
-Commits submitted by members of the OpenBMC GitHub community are compiled and
-tested via our [Jenkins](https://jenkins.openbmc.org/) server. Commits are run
-through two levels of testing. At the repository level the makefile `make check`
-directive is run. At the system level, the commit is built into a firmware image
-and run with an arm-softmmu QEMU model against a barrage of
-[CI tests](https://jenkins.openbmc.org/job/CI-MISC/job/run-ci-in-qemu/).
-
-Commits submitted by non-members do not automatically proceed through CI
-testing. After visual inspection of the commit, a CI run can be manually
-performed by the reviewer.
-
-Automated testing against the QEMU model along with supported systems are
-performed. The OpenBMC project uses the
-[Robot Framework](http://robotframework.org/) for all automation. Our complete
-test repository can be found
-[here](https://github.com/openbmc/openbmc-test-automation).
-
-## Submitting Patches
-
-Support of additional hardware and software packages is always welcome. Please
-follow the
-[contributing guidelines](https://github.com/openbmc/docs/blob/master/CONTRIBUTING.md)
-when making a submission. It is expected that contributions contain test cases.
-
-## Bug Reporting
-
-[Issues](https://github.com/openbmc/openbmc/issues) are managed on GitHub. It is
-recommended you search through the issues before opening a new one.
-
-## Questions
-
-First, please do a search on the internet. There's a good chance your question
-has already been asked.
-
-For general questions, please use the openbmc tag on
-[Stack Overflow](https://stackoverflow.com/questions/tagged/openbmc). Please
-review the
-[discussion](https://meta.stackexchange.com/questions/272956/a-new-code-license-the-mit-this-time-with-attribution-required?cb=1)
-on Stack Overflow licensing before posting any code.
-
-For technical discussions, please see [contact info](#contact) below for Discord
-and mailing list information. Please don't file an issue to ask a question.
-You'll get faster results by using the mailing list or Discord.
-
-## Features of OpenBMC
-
-### Feature List
-
-- Host management: Power, Cooling, LEDs, Inventory, Events, Watchdog
-- Full IPMI 2.0 Compliance with DCMI
-- Code Update Support for multiple BMC/BIOS images
-- Web-based user interface
-- REST interfaces
-- D-Bus based interfaces
-- SSH based SOL
-- Remote KVM
-- Hardware Simulation
-- Automated Testing
-- User management
-- Virtual media
-
-### Features In Progress
-
-- OpenCompute Redfish Compliance
-- Verified Boot
-
-### Features Requested but need help
-
-- OpenBMC performance monitoring
-
-## Finding out more
-
-Dive deeper into OpenBMC by opening the [docs](https://github.com/openbmc/docs)
-repository.
-
-## Technical Steering Committee
-
-The Technical Steering Committee (TSC) guides the project. Members are:
-
-- Roxanne Clarke, IBM
-- Nancy Yuen, Google
-- Patrick Williams, Meta
-- Terry Duncan, Intel
-- Sagar Dharia, Microsoft
-- Samer El-Haj-Mahmoud, Arm
-
-## Contact
-
-- Mail: openbmc@lists.ozlabs.org
-  [https://lists.ozlabs.org/listinfo/openbmc](https://lists.ozlabs.org/listinfo/openbmc)
-- Discord: [https://discord.gg/69Km47zH98](https://discord.gg/69Km47zH98)
