@@ -87,4 +87,9 @@ once this bash command is given the open bmc will start building it will take fe
 
 ## QEMU BUILD PROCESS
 
+###1)build pkg-config package
+```sh
+apt-get install -y pkg-config
+```
+
 
