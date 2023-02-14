@@ -169,12 +169,12 @@ bitbake virtual/kernel
 ```
 ### 3) to build a single package with bitbake
 
-# example: to build ptpd
+#### example: to build ptpd
 ```sh
 bitbake ptpd
 ```
 
-# to clean ptptd
+#### to clean ptptd
 ```sh
 bitbake -c clean ptpd
 bitbake -c cleanall ptpd
