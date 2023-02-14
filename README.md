@@ -142,6 +142,15 @@ make
 Built file will be located at: arm-softmmu/qemu-system-arm
 refer: https://github.com/openbmc/docs/blob/master/cheatsheet.md
 
- 
+ ## os running command
+ ### 1) windows
+ ```sh
+ cp /home/bmc.mtd .
+./qemu-system-arm -m 1024 -machine ast2600-evb -nographic     -drive file=bmc.mtd,format=raw,if=mtd
+```
+### 2) ubuntu
+```sh
+scp ubuntu@10.0.4.98:/home/ubuntu/bmc.mtd .
+```
 
 
