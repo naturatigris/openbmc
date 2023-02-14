@@ -152,5 +152,59 @@ refer: https://github.com/openbmc/docs/blob/master/cheatsheet.md
 ```sh
 scp ubuntu@10.0.4.98:/home/ubuntu/bmc.mtd .
 ```
+## command to build and add new packages to open bmc firmware
+
+### 1) to build kernel
+
+ 
+```sh
+bitbake virtual/kernel
+```
+### 2) to clean and build kernel
+```sh
+ bitbake -c clean virtual/kernel
+bitbake -c cleanall virtual/kernel
+bitbake virtual/kernel
+
+```
+### 3) to build a single package with bitbake
+
+# example: to build ptpd
+```sh
+bitbake ptpd
+```
+
+# to clean ptptd
+```sh
+bitbake -c clean ptpd
+bitbake -c cleanall ptpd
+```
+### 4) to clean and build open bmc image
+
+```sh 
+bitbake -c clean obmc-phosphor-image
+bitbake -c cleanall obmc-phosphor-image 
+bitbake obmc-phosphor-image
+```
+
+### 5) to add a new package
+```sh
+vi meta-evb/meta-evb-aspeed/meta-evb-ast2600/conf/layer.conf   
+
+IMAGE_INSTALL:append = " ntp"
+
+[add this chnages in github ] --> push it
+
+ . setup ast1600-evb
+
+ bitbake obmc-phosphor-image
+ ```
+
+ ### 6) to build u-boot
+```sh
+bitbake u-boot
+```
+
+### 7) upload the generated open bmc image in github
 
 
